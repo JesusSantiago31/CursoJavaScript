@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Poliza Seguros </title>
+        <link rel="stylesheet" href="CSS/style.css">
+    </head>
+    <body>
+        
+        
+        <section class="content-form1">
+            
+            <form id="frmDatos">
+                <h1>Cotiza tu seguro</h1>
+                <h3>Introduce tu nombre</h3>
+                <input id="txtNombre" class="cajas-texto" type="text" placeholder="Introduce tu nombre"> 
+                <br>
+                <h3>Introduce tu fecha de nacimiento</h3>
+                <input id="dtNacimiento" type="date" max="2023-10-12" value="0000-00-00" required pattern="\d{4}-\d{2}-\d{2}" >            
+                <span class="validity"></span>
+                <br>                
+            </form>            
+        </section>
+       
+        <section class="content-form">
+            <div class="form2">
+            <form id="frmSeguro1">
+                <h3>Selecciona el tipo de seguro</h3>
+                <select id="cmbTS" class="cajas-texto" size="1">
+                    <option value="ninguno">--Ninguno--</option>
+                    <option value="tipoA">A-Cobertura Amplia-</option>
+                    <option value="tipoB">B-Daños a terceros-</option>
+                </select>
+                <h3>¿Padece alguna de estas condiciones?</h3>
+                <input id="chckBeber" class="checkmark" type="checkbox"> Beber Alcohol
+                <br>
+                <input id="chckLentes" class="checkmark" type="checkbox"> Usar Lentes
+                <br>
+                <h3>¿Padeces alguna enfermedad?</h3>
+                <select id="cmbEnf" class="cajas-texto" size="1">                    
+                    <option value="ninguno">--Ninguna--</option>
+                    <option value="defCardiaca"> Deficiendia Cardiaca</option>
+                    <option value="diabetes"> Diabetes</option>                    
+                </select>
+                <button id="botones" type="submit">Guardar</button>
+                <button id="botones" type="reset">Cancelar</button>
+                <br>
+            </form>
+            <h4 id="resultado">a</h4>
+            </div>  
+            
+        </section>
+        <script src="JS/script.js"></script>
+    </body>
+</html>
