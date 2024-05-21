@@ -1,0 +1,85 @@
+/*TRABAJA POR MEDIO DE SELECTORES
+
+    nombreSelector{
+        propiedad1: valor;
+        propiedad2: valor;
+        ...
+        propiedadN= valor;
+    }
+
+    TIPOS DE SELECTORES:
+    1.-Universal: Aplica a todas las etiquetas de un documento web
+        se representa con "*"
+    2.-Etiqueta:  Afecta solo a la etiqueta html que se vaya a utilizar
+        se representa con el nombre de la etiqueta
+    3.-Clase: nombreClase
+    4.-Id: #nombreID
+
+    INV DOM
+*/
+/*Selectro universal: afecta a todo el doumento html*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+/*Selector de etiqueta: afecta a las etiquetas ecin el nombre de*/
+body{
+    background:#006064;
+}
+
+.content-form{
+    /*tamaño de ancho*/
+    width: 350px;
+    height: auto;
+    /*color de fondo*/
+    background-color:#05717a ;
+    /*padding es externo y margin interno*/
+    margin: auto;
+    margin-top: 30px;
+    padding: 30px;/*mespacio de caja y botones*/
+    border: 5px solid #094d55;/*caracteristicas al contorno con tipo de borde*/
+    border-radius: 10px; /*redondear esquinas*/
+    /**/
+    box-shadow: 10px 15px 40px #00ACC1;
+}
+h3,h4{
+    text-align: center;
+    color: aliceblue;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+form{
+    margin: auto;
+}
+
+.cajas-texto{
+    width: 95%;
+    margin-bottom: 10px;    
+    margin-left: 5px;
+    border-radius: 15px;   
+    height: 20px;
+}
+/*Selector de id: afecta a los que conengan la id en la etiqueta html*/
+#botones,select{
+    width:100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    background: #006064;
+    border: 3px solid #00838F;
+    color: blanchedalmond;
+    border-radius: 20px;   
+    
+}
+
+/*Selector de clase: Hace u tipo de evento para clase o id*/
+#botones:hover{
+    background: #00838F;
+    border-color: #034247;
+    color: #03393d;
+    cursor: progress;                                                                              
+    padding: 6px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;   
+    box-shadow: 5px 5px 5px #0097A7;
+}
