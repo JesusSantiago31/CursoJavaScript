@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Seguro para autos</title>
+    <link rel="stylesheet" href="CSSPR/diseñopr.css">
+
+</head>
+<body>
+    <section class="content-form">
+        <h3>Presupuesto de seguro </h3>
+        <form id="frmSeguro">
+            <input id="txtNombre" class="cajas-texto" type="text" placeholder="Nombre del solicitante">
+            <select id="cmbTipoSeguro" size="1">
+                <option value="No">Seleccione tipo de pago</option>
+                <option value="CoberturaAmplia">Cobertura Amplia (A)</option>
+                <option value="DañosTerceros">Daños a Terceros (B)</option>
+            </select>
+            
+            <br>
+            <input id="ckxBebesAlchol" type="checkbox" name="alcohol">
+            <label for="alcohol">Tomas Alcohol</label>
+            <br>
+            <input id="ckxUsasLentes" type="checkbox" name="lentes">
+            <label for="lentes">Utilizas Lentes</label>
+            <br>
+            <input id="ckxEnfermedad" type="checkbox" name="enfermedad">
+            <label for="enfermedad">Padece de Alguna Enfermedad como Deficiencia Cardiaca o Diabetes</label>
+            <br></br>
+            <input id="txtEdad" class="cajas-texto" type= "number" placeholder="Ingrese su Edad" min="0">
+            <button id="botones" types="submit">Calcular Presupuesto</button>
+            <button id="botones" types="reset">Cancelar</button>
+        </form>
+        <h4 id="resultado"></h4>
+    </section>
+    <script src="JSPR/seguropr.js"></script>
+</body>
+</html>
