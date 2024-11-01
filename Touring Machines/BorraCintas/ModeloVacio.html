@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulación Máquina Borracintas de Turing</title>
+    <!-- Enlaces. -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="CSS/styles.css" />
+    <!-- Fuente Titulos.. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Fuente textos. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=DynaPuff:wght@400..700&family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="principal">
+      <section class="notas">
+        <p class="nota__titulo">reglas:</p>
+        <div class="notas_contenedor">
+          <p class="nota__texto">
+            Al comienzo de la cinta debe llevar un espacio en blanco para que la
+            cinta no se desborde.
+          </p>
+        </div>
+        <div class="notas_contenedor">
+          <p class="nota__texto">
+            El cabezal de la maquina debe colocarse a la mitad de la cinta.
+          </p>
+        </div>
+      </section>
+      <section class="contenedor sombra">
+        <header class="header">
+          <h1 class="titulo">
+            Simulación Máquina <br />
+            Borracintas de Turing
+          </h1>
+        </header>
+        <div id="input-section">
+          <label class="parrafo" for="tapeInput"
+            >Introduce la cinta inicial (solo 0 y 1):</label
+          >
+          <input
+            class="input"
+            type="text"
+            id="tapeInput"
+            placeholder="Ejemplo: 1010101"
+            maxlength="20"
+          /><br /><br />
+          <label class="parrafo" for="headPosition"
+            >Posición inicial del cabezal (0 a longitud de cinta - 1):</label
+          >
+          <input
+            class="input"
+            type="number"
+            id="headPosition"
+            placeholder="Ejemplo: 3"
+            min="0"
+          />
+          <button class="boton btnIngresar" onclick="initializeTape()">
+            Ingresar Cinta
+          </button>
+        </div>
+        <div id="tape"></div>
+
+        <!-- Ruleta de estados -->
+        <section class="cuadro">
+          <div class="cuadro__circulo" id="state-circle">
+            <div class="state" data-state="A">A</div>
+            <div class="state" data-state="B">B</div>
+            <div class="state" data-state="C">C</div>
+            <div class="state" data-state="D">D</div>
+            <div class="state" data-state="E">E</div>
+            <div class="state" data-state="F">F</div>
+          </div>
+        </section>
+
+        <div id="control-buttons">
+          <button class="boton btnSiguiente" onclick="nextStep()">
+            Siguiente Paso
+          </button>
+          <button class="boton btnRetroceso" onclick="previousStep()">
+            Retroceder Paso
+          </button>
+          <button class="boton btnReiniciar" onclick="resetTape()">
+            Reiniciar Cinta
+          </button>
+        </div>
+      </section>
+    </main>
+    <script src="JS/functions.js"></script>
+  </body>
+</html>
